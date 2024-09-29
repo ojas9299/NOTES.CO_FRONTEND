@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useRecoilValue } from "recoil";
-import { isLoggedAtom } from "./atoms/useratoms.tsx";
-import Login from "./pages/login.tsx";
-import Landingpage from "./pages/landingpage.tsx";
-import NewNote from "./pages/newnote.tsx";
-import Editnote from "./pages/editnote.tsx";
-import Navbar from "./pages/navbar.tsx";
-import TagPage from "./pages/tag.tsx";
+import { isLoggedAtom } from "./atoms/useratoms";
+import Login from "./pages/login";
+import Landingpage from "./pages/landingpage";
+import NewNote from "./pages/newnote";
+import Editnote from "./pages/editnote";
+import Navbar from "./pages/navbar";
+import TagPage from "./pages/tag";
 
 export default function App() {
   const isLoggedIn = useRecoilValue(isLoggedAtom);
