@@ -21,8 +21,12 @@ export default function Login() {
       e.preventDefault();
 
       try {
-        let response = await api.post("/api/login", { email, password });
+        let response = await api.post("/api/register", { email, password });
         console.log("Login response:", response.data);
+
+        // if (response.data.message === "User registered successfully") {
+        //   navigate("/landingpage");
+        // }
 
         if (response.data.token) {
           localStorage.setItem("token", response.data.token);
